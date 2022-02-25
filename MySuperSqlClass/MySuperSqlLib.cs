@@ -111,7 +111,7 @@ namespace MySuperSqlClass
                 }
                 if (errors)
                 {
-                    throw new Exception("This method only support Select querys");
+                    throw new Exception("This method does not support Select querys");
                 }
                 SqlCommand command = new SqlCommand(query, this.getCon());
                 foreach (KeyValuePair<string, string> kvp in parameters)
@@ -143,7 +143,7 @@ namespace MySuperSqlClass
                 }
                 if (errors)
                 {
-                    throw new Exception("This method only support Select querys");
+                    throw new Exception("This method only support Insert querys");
                 }
                 SqlCommand command = new SqlCommand(query, this.getCon());
                 foreach (KeyValuePair<string, string> kvp in parameters)
