@@ -64,7 +64,7 @@ Methods:
  public int ExecuteInsertQueryReturningId(string query, Dictionary<string, string> parameters)
 ```
 ```bash
-Exemple for public List<T> ExecuteSelectQuery<T>(string query, Dictionary<string, string> parameters) where T : new()
+Example for public List<T> ExecuteSelectQuery<T>(string query, Dictionary<string, string> parameters) where T : new()
 
 Params:
 - string query
@@ -79,12 +79,12 @@ Requiremts:
 will work with: Select querys;
 will not work with : Update, Delete , Insert querys;
 
-Exemple:
+Example:
 ```
 ![Screenshot](screenshot7.png)
 
 ```bash
-Exemple for public void ExecuteQuery(string query, Dictionary<string, string> parameters)
+Example for public void ExecuteQuery(string query, Dictionary<string, string> parameters)
 
 Params:
 - string query
