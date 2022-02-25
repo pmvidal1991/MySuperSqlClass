@@ -99,12 +99,12 @@ Requiremts:
 will work with: Update, Delete , Insert querys; 
 will not work with : Select querys;
 
-Exemple:
+Example:
 ```
 ![Screenshot](screenshot8.png)
 
 ```bash
-Exemple for public int ExecuteInsertQueryReturningId(string query, Dictionary<string, string> parameters)
+Example for public int ExecuteInsertQueryReturningId(string query, Dictionary<string, string> parameters)
 
 Params:
 - string query
@@ -119,7 +119,7 @@ Requiremts:
 will work with: Insert querys; 
 will not work with : Update, Delete , Select querys;
 
-Exemple:
+Example:
 ```
 ![Screenshot](screenshot9.png)
 
