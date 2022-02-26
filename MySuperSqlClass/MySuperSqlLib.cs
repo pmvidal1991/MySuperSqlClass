@@ -8,8 +8,8 @@ namespace MySuperSqlClass
     {
         private String ConString;
         private SqlConnection con;
-        private string[] selectOptions = new string[] { "Select", "select", "SELECT" };
-        private string[] insertOptions = new string[] { "Insert", "insert", "INSERT" };
+        private string selectOptions =  "SELECT" ;
+        private string insertOptions =  "INSERT" ;
 
 
         public MySuperSqlLib(string con)
@@ -58,7 +58,7 @@ namespace MySuperSqlClass
             {
                 bool errors = false;
                 string op = query.Split(" ")[0];
-                if (op != selectOptions[0] && op != selectOptions[1] && op != selectOptions[2])
+                if (op.ToUpper() != selectOptions)
                 {
                     errors = true;
                 }
@@ -105,7 +105,7 @@ namespace MySuperSqlClass
             {
                 bool errors = false;
                 string op = query.Split(" ")[0];
-                if (op == selectOptions[0] || op == selectOptions[1] || op == selectOptions[2])
+                if (op.ToUpper() == selectOptions)
                 {
                     errors = true;
                 }
@@ -137,7 +137,7 @@ namespace MySuperSqlClass
             {
                 bool errors = false;
                 string op = query.Split(" ")[0];
-                if (op != insertOptions[0] && op != insertOptions[1] && op != insertOptions[2])
+                if (op.ToUpper() != insertOptions)
                 {
                     errors = true;
                 }
