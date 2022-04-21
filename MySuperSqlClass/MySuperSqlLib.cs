@@ -19,6 +19,7 @@ namespace MySuperSqlClass
             this.con = new SqlConnection(ConString);
 
         }
+
         public SqlConnection getCon()
         {
             return this.con;
@@ -81,7 +82,14 @@ namespace MySuperSqlClass
                     var typeProperties = typeof(T).GetProperties();
                     foreach (var property in typeProperties)
                     {
-                        property.SetValue(tmp, reader2[property.Name], null);
+                        try
+                        {
+                            property.SetValue(tmp, reader2[property.Name] , null);
+                        }catch(Exception ex)
+                        {
+                            continue;
+                        }
+                       
 
                     }
                     list.Add(tmp);
